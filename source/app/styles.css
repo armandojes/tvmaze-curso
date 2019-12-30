@@ -1,0 +1,9 @@
+:root{
+  --primary-color: #3c948b;
+  --secondary-color: #3f3f3f;
+  --text-color: #fff;
+}
+
+img{
+  max-width: 100%;
+}

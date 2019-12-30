@@ -1,0 +1,18 @@
+.content{
+  display: flex;
+  justify-content: space-between;
+}
+.picture {
+  width: 100%;
+  width: 40%;
+}
+.summary{
+  width: 57%;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+.name{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,9 @@
+.picture{
+  width: 100px;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 96vh;
+}

@@ -1,0 +1,15 @@
+.header{
+  background-color: var(--primary-color);
+}
+.container{
+  text-align: center;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link{
+  color: #fff;
+  font-size: 2em;
+  text-decoration: none;
+}

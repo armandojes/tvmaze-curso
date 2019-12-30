@@ -1,0 +1,15 @@
+.content{
+  width: 18%;
+  display: block;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+.picture{
+  width: 100%;
+}
+.name{
+  font-size: 1.2em;
+  text-align: center;
+  margin: 10px auto;
+}
