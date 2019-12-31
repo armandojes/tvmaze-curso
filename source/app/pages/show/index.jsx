@@ -12,8 +12,10 @@ function Show(){
   
 
   useFetch(async () => {
-    const {data} = await axios({url: `https://api.tvmaze.com/shows/${id}`});
-    set_info(data);
+    if (!info){
+      const {data} = await axios({url: `https://api.tvmaze.com/shows/${id}`});
+      set_info(data);
+    }
   },[]);
 
   

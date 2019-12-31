@@ -9,10 +9,10 @@ function Home (){
   const [shows, set_shows] = useState([]);
 
   useFetch(async () => {
-    
+    if (shows.length === 0){
       const {data} = await axios({url: `https://api.tvmaze.com/shows?page=1`});
       set_shows(shows.concat(data.slice(-20)));
-    
+    }
   },[]);
 
 

@@ -13,13 +13,13 @@ server.get('*', async (request, response) => {
 
   const context = {};
 
-  const {app_rendered, states} = await renderToStringAsync(
+  const {content, states} = await renderToStringAsync(
     <StaticRouter location={request.url} context={context}>
       <App />
     </StaticRouter>
   );
   
-  const markup = renderToStaticMarkup(<Markup aplication={app_rendered} states={states} />);
+  const markup = renderToStaticMarkup(<Markup aplication={content} states={states} />);
   response.send(markup);
   response.end();
 })
