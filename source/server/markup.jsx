@@ -11,8 +11,8 @@ function Markup (props){
     </head>
     <body>
       <div id="render_target" dangerouslySetInnerHTML={{__html: props.aplication }}></div>
-      <script dangerouslySetInnerHTML={{__html: props.states}} />
-      <script src="/public/client.js"></script>
+      <script defer dangerouslySetInnerHTML={{__html: props.states}} />
+      <script defer src="/public/client.js"></script>
     </body>
     </html>
   )

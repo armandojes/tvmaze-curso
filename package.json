@@ -29,7 +29,8 @@
   "scripts": {
     "watch": "set NODE_ENV=development&& webpack --watch --mode development",
     "build": "set NODE_ENV=production&& webpack --mode production",
-    "server": "nodemon ./build/server.js"
+    "dev": "nodemon ./build/server.js",
+    "server": "node ./build/server.js"
   },
   "keywords": [
     "react",
