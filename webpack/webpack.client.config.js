@@ -1,5 +1,6 @@
 const path = require('path');
 const extract = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 
 const config = {
   entry: ["regenerator-runtime/runtime", path.resolve(__dirname, '../source/client.jsx')],
@@ -19,12 +20,23 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: [extract.loader, {
-          loader: 'css-loader',
-          options: {
-            modules: true,
+        use: [
+          {
+            loader: extract.loader
           },
-        }],
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [autoprefixer()]
+            }
+          },
+        ],
       },
     ],
   },
