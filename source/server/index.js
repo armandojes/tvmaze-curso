@@ -19,8 +19,8 @@ server.get('*', async (request, response) => {
     </StaticRouter>
   );
   
-  const markup = renderToStaticMarkup(<Markup aplication={content} states={states} />);
-  response.send(markup);
+  const full_html = Markup(content, states);
+  response.send(full_html);
   response.end();
 })
 
