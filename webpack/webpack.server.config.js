@@ -1,5 +1,5 @@
 const path = require('path');
-const extract = require('mini-css-extract-plugin');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   entry: ["regenerator-runtime/runtime", path.resolve(__dirname, '../source/server/index.js')],
@@ -21,7 +21,7 @@ const config = {
         test: /\.css$/,
         use: [
           {
-            loader: extract.loader
+            loader: miniCssExtractPlugin.loader
           },
           {
             loader: 'css-loader',
@@ -37,7 +37,7 @@ const config = {
     extensions: ['.js', '.jsx', '.css'],
   },
   plugins: [
-    new extract({
+    new miniCssExtractPlugin({
       filename: "styles.css"
     }),
   ],
