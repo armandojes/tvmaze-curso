@@ -1,5 +1,4 @@
 import express from 'express';
-import {renderToStaticMarkup } from 'react-dom/server';
 import Markup from './markup';
 import React from 'react';
 import App from '../app';
@@ -7,6 +6,7 @@ import {StaticRouter} from 'react-router';
 import {renderToStringAsync} from 'react-fetch-ssr';
 
 const server = express();
+
 server.use('/public', express.static('public'));
 
 server.get('*', async (request, response) => {
@@ -24,4 +24,5 @@ server.get('*', async (request, response) => {
   response.end();
 })
 
-server.listen(8080);
+
+server.listen(3000);

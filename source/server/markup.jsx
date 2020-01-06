@@ -4,7 +4,7 @@ function markup (content, states){
   return (`
     <html lang="en">
     <head>
-      <base href="http://localhost:8080" />
+      <base href="http://localhost:3000" />
       <meta charSet="UTF-8" />
       <title>Tvmaze ssr</title>
       <link rel="stylesheet" href="/public/styles.css" />
